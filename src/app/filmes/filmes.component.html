@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<main>
+    <h1>Filmes</h1>
+    <div class="test">
+        <img src="../../assets/cinema 1.png" alt="O Filme Vai Pra Casa Do Kray">
+    </div>
+    <form [formGroup]="form">
+    <div class="Cards">
+        <div class="Card">
+            <label>Cadastrar Filmes</label>
+            <input type="text" formControlName="filme" name="filme" required="">
+        </div>
+        <div class="Card">
+            <select name="selector" id="selector" >
+                <option value="Outros" disabled selected>Gênero</option>
+                <option value="Terror">Terror</option>
+                <option value="Acao">Ação</option>
+                <option value="Comedia">Comédia</option>
+                <option value="Biografia">Biografia</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Documentário">Documentário</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Fantasia">Fantasia</option>
+            </select>
+        </div>
+        <button type="button">Salvar</button>
+    </div>
+
+</form>
+</main>

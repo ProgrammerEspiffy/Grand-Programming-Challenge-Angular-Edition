@@ -1,0 +1,21 @@
+// Cabeçalho
+header{
+    display: flex;
+    justify-content: space-around;
+    background: #9BD2DE;
+    padding: 2%;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    width: auto;
+}
+#Navegacao{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35%;
+    font-size: 18px;
+    color: black;
+}
+p{
+    width: 330px;
+}

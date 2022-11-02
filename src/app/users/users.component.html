@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<!-- O Principal -->
+<main>
+    <h1>Cadastro</h1>
+    <br>
+
+    <div id="Cadastro">
+        <form [formGroup]="form">
+
+            <div class="Inpubel">
+                <label>Nome</label>
+                <br>
+                <input type="text" formControlName="nome" name="nome" required="">
+            </div>
+
+            <br>
+            <div class="Inpubel">
+                <label>E-mail</label>
+                <br>
+                <input type="email" formControlName="email" name="email" required="">
+            </div>
+            <br>
+
+            <div class="Inpubel">
+                <label>Telefone</label>
+                <br>
+                <input type="text" formControlName="Telefone" name="Telefone" required="">
+            </div>
+        </form>
+        <br>
+        <button type="button">Cadastrar</button>
+    </div>
+</main>
