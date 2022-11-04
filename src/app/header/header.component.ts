@@ -17,10 +17,10 @@ export class HeaderComponent implements OnInit {
       this.frase = 'Conheça nossa Coletânea'
     }
     else if(this.router.url === '/users'){
-      this.frase = 'Faça o Cadastro de usuários e  edite, caso necessário Pronto para cadastrar? '
+      this.frase = 'Faça o Cadastro de usuários e edite, caso necessário Pronto para cadastrar? '
     }
     else if(this.router.url === '/filmes'){
-      this.frase = 'Cadastre os filmes de sua preferência '
+      this.frase = 'Cadastre os filmes de sua preferência'
     }
     else if(this.router.url === '/genero'){
       this.frase = 'Cadastre os gêneros dos filmes'

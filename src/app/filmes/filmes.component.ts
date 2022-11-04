@@ -14,7 +14,7 @@ export class FilmesComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      genero: new FormControl('')
+      filme: new FormControl('')
 
     })
     this.form.valueChanges.subscribe(console.log);
