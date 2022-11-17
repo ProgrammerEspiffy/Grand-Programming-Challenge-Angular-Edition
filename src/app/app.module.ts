@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { FilmesComponent } from './filmes/filmes.component';
 import { FooterComponent } from './footer/footer.component';
 import { GeneroComponent } from './genero/genero.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { GeneroComponent } from './genero/genero.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

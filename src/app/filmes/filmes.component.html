@@ -9,22 +9,25 @@
     <div class="Cards">
         <div class="Card">
             <label>Cadastrar Filmes</label>
-            <input type="text" formControlName="filme" name="filme" required="">
+            <input type="text" formControlName="nomeFilmes" name="nomeFilmes" required="">
         </div>
         <div class="Card">
-            <select name="selector" id="selector" >
+            <select id="selector" formControlName="nomeGenero" name="nomeGenero">
                 <option value="Outros" disabled selected>Gênero</option>
-                <option value="Terror">Terror</option>
-                <option value="Acao">Ação</option>
-                <option value="Comedia">Comédia</option>
-                <option value="Biografia">Biografia</option>
-                <option value="Suspense">Suspense</option>
-                <option value="Documentário">Documentário</option>
-                <option value="Aventura">Aventura</option>
-                <option value="Fantasia">Fantasia</option>
+                <!-- ngfor = o For Antigo do 
+                    let i = 0; i < listaGeneros.length; i++ -->
+                <option *ngFor="let item of listaGeneros; index as i;" [value]="item.id">{{item.nomeGenero}}</option>
             </select>
         </div>
-        <button type="button">Salvar</button>
+        <button type="button"(click)="Enviardados()" *ngIf="cadastrar" >Cadastrar</button>
+        <button type="button"(click)="Editardados()" *ngIf="!cadastrar" >Editar</button>
+    </div>
+    <div class="cardizinho" *ngFor="let item of listaFilmes; index as i;">
+        <p>{{item.nomeFilmes}}</p>
+        <p>{{item.genero.nomeGenero}}</p>
+
+        <button class="editar"(click)="editar(item)">Editar</button>
+        <button class="excluir"(click)="excluirDados(item.id)">Excluir</button>
     </div>
 
 </form>

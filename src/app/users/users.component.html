@@ -25,10 +25,19 @@
             <div class="Inpubel">
                 <label>Telefone</label>
                 <br>
-                <input type="text" formControlName="Telefone" name="Telefone" required="">
+                <input type="text" formControlName="telefone" name="telefone" required="">
             </div>
         </form>
         <br>
-        <button type="button">Cadastrar</button>
+        <button type="button"(click)="enviarDados()" *ngIf="cadastrar" >Cadastrar</button>
+        <button type="button"(click)="editarDados()" *ngIf="!cadastrar" >Editar</button>
+    </div>
+    <div class="cardizinho" *ngFor="let item of listaUsers; index as i;">
+        <p>{{item.nome}}</p>
+        <p>{{item.email}}</p>
+        <p>{{item.telefone}}</p>
+
+        <button class="editar"(click)="editar(item)">Editar</button>
+        <button class="excluir"(click)="excluirDados(item.id)">Excluir</button>
     </div>
 </main>
