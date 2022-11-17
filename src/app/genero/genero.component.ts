@@ -8,16 +8,16 @@ import { GeneroService } from '../services/genero.service';
   styleUrls: ['./genero.component.scss']
 })
 export class GeneroComponent implements OnInit {
+  // Váriaveis
   form!: FormGroup;
-
   cadastrar: boolean = true;
-
   id: number = 0;
 
   listaGeneros: any;
   constructor(private formBuilder: FormBuilder, private salvarGenero: GeneroService) { }
 
   ngOnInit(): void {
+    // Pegar O Form do Gênero
     this.form = this.formBuilder.group({
       Genero: new FormControl('')
 
@@ -41,7 +41,7 @@ export class GeneroComponent implements OnInit {
     })
   }
 
-  //EnviarDados
+  //Enviar os Dados do Cadastro
   Enviardados(){
     let dados = {
       //Pegar Dados
@@ -62,6 +62,7 @@ export class GeneroComponent implements OnInit {
     })
   }
 
+    // Excluir os Dados
   excluirDados(id: number) {
     this.salvarGenero.deleteGenero(id).subscribe({
       next: (dados) => {
@@ -75,25 +76,22 @@ export class GeneroComponent implements OnInit {
     })
   }
   
-
+    // Que Vai Fazer a Edição da base de Dados
   editar(item: any) {
-    this.form.controls["nome"].setValue(item.nome);
-    this.form.controls["email"].setValue(item.email);
-    this.form.controls["telefone"].setValue(item.telefone);
+    this.form.controls["Genero"].setValue(item.nomeGenero);
     
     this.cadastrar = false
     this.id = item.id
   }
 
+    // "Editardados" vai Enviar Pra Mock API
   editarDados() {
     let dados = {
       // Pegar Dados
       id: this.id,
-      nome: this.form.controls["nome"].value,
-      email: this.form.controls["email"].value,
-      telefone: this.form.controls["telefone"].value
+      nome: this.form.controls["Genero"].value,
     }
-    
+      // Vai Fazer A Edição
     this.salvarGenero.putGenero(dados, this.id).subscribe({
       next: (dados) => {
         console.log(dados);

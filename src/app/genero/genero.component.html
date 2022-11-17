@@ -7,13 +7,19 @@
         <img src="../../assets/theater 1.png" alt="Triste & Feliz Os Aminimigos">
     </div>
     <div class="Cards">
+        
+        <!-- Input de Cadastro -->
         <div class="Input">
             <label>Cadastrar</label>
             <input type="text" placeholder="Gênero" formControlName="Genero" name="Genero" required="">
         </div>
+
+        <!-- Troca de Botões -->
         <button type="button"(click)="Enviardados()" *ngIf="cadastrar" >Cadastrar</button>
         <button type="button"(click)="editarDados()" *ngIf="!cadastrar" >Editar</button>
     </div>
+
+    <!-- A Base de Dados -->
     <div class="cardizinho" *ngFor="let item of listaGeneros; index as i;">
         <p>{{item.nomeGenero}}</p>
 

@@ -114,8 +114,4 @@ export class UsersComponent implements OnInit {
     })
     this.cadastrar = true
   }
-
-  
-  
-
 }

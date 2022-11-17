@@ -20,15 +20,20 @@ export class FilmesComponent implements OnInit {
 
   id: number = 0;
 
+  // Metodo Construtor
   constructor(private formBuilder: FormBuilder, private salvarFilmes: FilmesService, private salvarGenero: GeneroService) { }
 
   ngOnInit(): void {
+    // Pegar o Form
     this.form = this.formBuilder.group({
       nomeFilmes: new FormControl(''),
       nomeGenero: new FormControl(0)
     })
+
+    // Mudança de Valores
     this.form.valueChanges.subscribe(console.log);
   
+    // Chamar os Funções
     this.seeMovie();
     this.pegaGenero();
   }
@@ -63,6 +68,7 @@ export class FilmesComponent implements OnInit {
     })
   }
 
+  //Enviar Os Dados
   Enviardados() {
     let dados = {
       //Pegar Daddos
@@ -83,6 +89,7 @@ export class FilmesComponent implements OnInit {
     })
   }
 
+  // Excluir os Dados
   excluirDados(id: number) {
     this.salvarFilmes.deleteFilmes(id).subscribe({
       next: (dados) => {
@@ -95,8 +102,8 @@ export class FilmesComponent implements OnInit {
       }
     })
   }
-  
 
+  // Que Vai Fazer a Edição da base de Dados
   editar(item: any) {
     this.form.controls["nomeFilmes"].setValue(item.nomeFilmes);
     this.form.controls["nomeGenero"].setValue(item.nomeGenero);
@@ -105,6 +112,7 @@ export class FilmesComponent implements OnInit {
     this.id = item.id
   }
 
+  // "Editardados" vai Enviar Pra Mock API
   Editardados() {
     let dados = {
       // Pegar Dados
@@ -113,7 +121,8 @@ export class FilmesComponent implements OnInit {
       generoId: parseInt(this.form.controls["nomeGenero"].value)
 
     }
-    
+
+    // Vai Fazer A Edição
     this.salvarFilmes.putFilmes(dados, this.id).subscribe({
       next: (dados) => {
         console.log(dados);

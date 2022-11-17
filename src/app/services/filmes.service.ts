@@ -6,22 +6,28 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FilmesService {
-  private url = 'http://localhost:3000/filmes?_expand=genero'
+  
+  //A URL 
+  private url = 'http://localhost:3000/filmes'
   constructor(private http: HttpClient) { }
 
   //Pegar Filmes
   getFilmes(): Observable<any>{
-    return this.http.get(`${this.url}`)
+    // Coloque Um "?_expand=nomeService" para Funcionar um id Do Produto
+    return this.http.get(`${this.url}?_expand=genero`)
   }
 
+  // Cadastrar Filmes
   postFilmes(Dados: any): Observable<any>{
     return this.http.post(`${this.url}`, Dados)
   }
 
+  // Excluir Filmes
   deleteFilmes(id: number): Observable<any>{
     return this.http.delete(`${this.url}/${id}`)
   }
 
+  // Editar Filmes
   putFilmes(dados: any, id: number): Observable<any>{
     return this.http.put(`${this.url}/${id}`,dados)
   }

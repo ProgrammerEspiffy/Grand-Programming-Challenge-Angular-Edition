@@ -8,6 +8,7 @@
     <div id="Cadastro">
         <form [formGroup]="form">
 
+            <!-- Input Nome -->
             <div class="Inpubel">
                 <label>Nome</label>
                 <br>
@@ -15,6 +16,8 @@
             </div>
 
             <br>
+
+            <!-- Input Email -->
             <div class="Inpubel">
                 <label>E-mail</label>
                 <br>
@@ -22,6 +25,7 @@
             </div>
             <br>
 
+            <!-- Input Telefone -->
             <div class="Inpubel">
                 <label>Telefone</label>
                 <br>
@@ -29,9 +33,13 @@
             </div>
         </form>
         <br>
+
+        <!-- Troca de Botões -->
         <button type="button"(click)="enviarDados()" *ngIf="cadastrar" >Cadastrar</button>
         <button type="button"(click)="editarDados()" *ngIf="!cadastrar" >Editar</button>
     </div>
+
+    <!-- Base de Dados -->
     <div class="cardizinho" *ngFor="let item of listaUsers; index as i;">
         <p>{{item.nome}}</p>
         <p>{{item.email}}</p>

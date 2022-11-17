@@ -5,23 +5,36 @@
     <div class="test">
         <img src="../../assets/cinema 1.png" alt="O Filme Vai Pra Casa Do Kray">
     </div>
+    
+    <!-- Formulário do Html para o Typescript -->
     <form [formGroup]="form">
     <div class="Cards">
         <div class="Card">
             <label>Cadastrar Filmes</label>
+            
+            <!-- Input de Cadastro -->
             <input type="text" formControlName="nomeFilmes" name="nomeFilmes" required="">
         </div>
+
         <div class="Card">
+            
+            <!-- Uma Seleção de Opções -->
             <select id="selector" formControlName="nomeGenero" name="nomeGenero">
                 <option value="Outros" disabled selected>Gênero</option>
                 <!-- ngfor = o For Antigo do 
                     let i = 0; i < listaGeneros.length; i++ -->
+
+                    <!-- Seleção  Dinâmica -->
                 <option *ngFor="let item of listaGeneros; index as i;" [value]="item.id">{{item.nomeGenero}}</option>
             </select>
         </div>
+
+        <!-- Troca de Botões -->
         <button type="button"(click)="Enviardados()" *ngIf="cadastrar" >Cadastrar</button>
         <button type="button"(click)="Editardados()" *ngIf="!cadastrar" >Editar</button>
     </div>
+
+    <!-- base de Dados -->
     <div class="cardizinho" *ngFor="let item of listaFilmes; index as i;">
         <p>{{item.nomeFilmes}}</p>
         <p>{{item.genero.nomeGenero}}</p>
