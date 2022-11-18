@@ -1,27 +1,79 @@
-# ProjectProgrammermoid
+Como Rodar O Projeto?
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+Rodando Projeto parte 1:
 
-## Development server
+1: Abra A Pasta do Projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2: Abra um Novo terminal
 
-## Code scaffolding
+(Abra O Link dessa imagem)
+https://prnt.sc/3MwFgyQSHFKs
+https://prnt.sc/3MwFgyQSHFKs
+https://prnt.sc/q5v_tWUEmjZy
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3: Clique no "+"
 
-## Build
+https://prnt.sc/RvT3TyJ2Uo7N
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+4: Selecione o  Git Bash Ou o CMD
+https://prnt.sc/RvT3TyJ2Uo7N
+https://prnt.sc/cj8lPqGPqd4s
 
-## Running unit tests
+5: rode esse Comando para abrir o Projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+(Para Copiar)
+"ng serve"
+e Pressione "Enter"
 
-## Running end-to-end tests
+https://prnt.sc/kFtZ3a4cDBs0
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+6: Cole esse Link no Navegador
 
-## Further help
+(Para copiar)
+"http://localhost:4200/"
+e Precione enter
+https://prnt.sc/y02IbaqCzzT9
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Para Rodar a Api:
+
+Rodando Projeto parte 2:
+
+1: Abra Um Novo terminal
+
+https://prnt.sc/Gh-7GDgyj2Zy
+
+2: Escolha um desses dois terminais (Git Bash ou CMD)
+
+https://prnt.sc/hp4ys7XbtjJ9
+
+3: Copie Esse Comando
+
+(Para Copiar)
+"cd src"
+e Prescione "Enter"
+
+https://prnt.sc/UqB_ocVYCmrI
+
+4: Depois Copie esse Comando
+
+(Para Copiar)
+"cd Servidor"
+e Presscione "Enter"
+
+https://prnt.sc/BA8FM8x4nqDf
+
+5: Agora Cole Esse Comando
+
+(Para Copiar)
+"json-server --watch Dados.json"
+e Prescione "Enter"
+
+https://prnt.sc/C2Zrnpc-QkwJ
+
+6: Aproveite O Projeto
+
+
+Direitos Reservado Por Espiffy
+
+E Direitos Mestres Reservado Por BRQ Digital Solutions
